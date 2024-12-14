@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesUA.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/siteLogo.webp" />
+    <title>Paw Sanctuary | Adopt</title>
+</head>
+<body>
+    <header>
+        <img class="settings-button" id="settingsOpen" src="../images/settings.svg">
+        <nav class="top-menu container">
+            <a class="top-menu-item" href="index.html">Головна</a>
+            <a class="top-menu-item active-page" href="adopt.html">Оголошення</a>
+            <a href="index.html"><img class="top-menu-logo" src="../images/topLogo.webp"></a>
+            <a class="top-menu-item" href="contacts.html">Контакти</a>
+            <a class="top-menu-item" href="#" id="donateOpen">Пожертвування</a>
+            <a class="mobile-button" id="mobileOpen" href=""><img src="../images/mobile.svg"></a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="adopt-head">
+            <div class="line"></div>
+            <h1 class="adopt-header" id="profileHeader"></h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-gallery">
+                <div class="gallery-main">
+                    <a id="prevImg" class="gallery-change" href=""><</a>
+                    <img id="displayedImg" class="gallery-main-displayed">
+                    <a id="nextImg" class="gallery-change" href="">></a>
+                </div>
+
+                <div class="gallery-images" id="imageContainer">
+
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-description">
+                    <h2 id="profileBreed"></h2>
+                    <h2>About <span id="profileName"></span></h2>
+                    <p id="profileDescription"></p>
+                </div>
+                
+                <div class="profile-adopt">
+                    <div class="profile-card">
+                        <div class="profile-card-section">
+                            <h2>Rescue Group:</h2>
+                            <p>Paw Sanctuary</p>
+                        </div>
+
+                        <div class="profile-card-section">
+                            <h2>Location:</h2>
+                            <p>729 Beverley Rd <br>
+                                729 Beverley Rd, Hull HU6 7EY, UK</p>
+                        </div>
+
+                        <div class="profile-card-section">
+                            <h2>Age:</h2>
+                            <p id="profileAge"></p>
+                        </div>
+
+                        <div class="profile-card-section">
+                            <h2>Adoption Fee:</h2>
+                            <p>£ <span id="profileFee"></span></p>
+                        </div>
+
+                        <div class="profile-card-section">
+                            <h2>Pre-Adoption Check:</h2>
+                            <p><span id="profileDesexed"></span> Desexed</p>
+                            <p><span id="profileVaccinated"></span> Vaccinated</p>
+                        </div>
+                    </div>
+                    <a class="profile-adopt-button" href="" id="adoptNow">Adopt Now</a>
+                </div>
+            </div>
+
+            <div id="profileRemove" class="profile-remove hidden">
+                <a class="profile-remove-button" href=""><img class="profile-remove-svg" src="../images/delete.svg">Remove this listing</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top container">
+            <h1 class="footer-logo-name">Paw</br>Sanctuary</h1>
+            <img src="../images/footerlogo.webp">
+            <div class="footer-socials">
+                <a href="https://www.facebook.com" target="_blank"><img src="../images/footerfb.webp"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../images/footerinst.webp"></a>
+                <a href="https://mail.google.com" target="_blank"><img src="../images/footermail.webp"></a>
+            </div>
+        </div>
+        <p class="footer-copyright">©Paw Sanctuary 2024</p>
+    </footer>
+
+    <div class="modal mobile-menu hidden" id="mobileMenu">
+        <div class="mobile-close" id="mobileClose">
+            <div class="modal-close-line-1-mobile"></div>
+            <div class="modal-close-line-2-mobile"></div>
+        </div>
+        <div class="mobile-menu-items">
+            <a class="mobile-menu-item active-page" href="index.html">Головна</a>
+            <a class="mobile-menu-item" href="adopt.html">Оголошення</a>
+            <a class="mobile-menu-item" href="contacts.html">Контакти</a>
+            <a class="mobile-menu-item" href="" id="donateOpenMobile">Пожертвування</a>
+            <a class="mobile-menu-item" href="#" id="settingsOpenMobile">Налаштування</a>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="settingsModal">
+        <div class="settings-modal">
+            <div class="modal-close" id="settingsClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="settings-head">Налаштування</h1>
+            <div class="settings-content">
+                <div class="lang-selector">
+                    <h2>Мова</h2>
+                    <div class="lang-selectors">
+                        <a href="../index.html" class="lang-selector-button"><img src="../images/usa.svg" class="lang-flag">English</a>
+                        <a href="ua-UA/index.html" class="lang-selector-button"><img src="../images/ua.svg" class="lang-flag">Українська</a>
+                    </div>
+                </div>
+
+                <div class="settings-admin">
+                    <h2>Для адміністрації</h2>
+                    <a class="settings-admin-auth" id="adminButton">Авторизація</a>
+                    <a class="settings-admin-auth" id="adminLogout">Вихід</a>
+                    <form class="settings-admin-form hidden" id="adminForm">
+                        <input class="admin-log" type="email" name="email" placeholder="email">
+                        <input class="admin-log" type="password" name="password" placeholder="password">
+                        <button class="admin-button">Вхід</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="donateModal">
+        <div class="donate-modal">
+            <div class="modal-close" id="donateClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="donate-head">Пожертвування</h1>
+            <div class="donate-content">
+                <p>Всі лапи нашого притулку постійно потребують їжі та іграшок, щоб вони були щасливі і задоволені. <br>
+                    Будь-яка грошова допомога дуже цінується, також ви можете надсилати іграшки та ласощі на нашу абонентську скриньку. <br>
+                    Дякуємо, що робите свій внесок у добру справу!
+                </p>
+                <div class="donate-options">
+                    <div>
+                        <h2>Грошова підтримка</h2>
+                        <form class="donate-form">
+                            <div class="donate-section">
+                                <p class="donate-pound">£</p>
+                                <input class="donate-money-input" type="number" placeholder="1 to 1000" id="donateInput" min="1" max="1000" required>
+                            </div>
+
+                            <div class="donate-buttons">
+                                <a href="" id="donate10">10£</a>
+                                <a href="" id="donate50">50£</a>
+                                <a href="" id="donate100">100£</a>
+                                <a href="" id="donate250">250£</a>
+                                <a href="" id="donate500">500£</a>
+                                <a href="" id="donate1000">1000£</a>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="firstName">Ім'я</label>
+                                <input type="text" name="firstName" autocomplete="off" placeholder="Ім'я..." minlength="2" maxlength="20" required>
+                            </div>
+
+                            <div class="donate-inputs"> 
+                                <label for="secondName">Фамілія</label>
+                                <input type="text" name="secondName" autocomplete="off" placeholder="Фамілія..." minlength="2" maxlength="20" required>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" autocomplete="off" placeholder="example@mail.net" minlength="1" maxlength="50" required>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="comm">Коментар (Не обов'язковий)</label>
+                                <textarea class="donate-input-comment" name="comm" placeholder="Ваш коментар...(максимум 250 символів)" minlength="1" maxlength="250"></textarea>
+                            </div>
+                            <div class="donate-send-container">
+                                <input class="donate-send donate-form-button" type="submit" value="Пожертвувати">
+                                <input class="donate-reset donate-form-button" type="reset" value="Скинути форму">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="donate-box">
+                        <h2>Скринька</h2>
+                        <h3>Paw Sanctuary <br>
+                            729 Beverley Rd <br>
+                            729 Beverley Rd, Hull HU6 7EY, UK <br>
+                            Box #108</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="adoptionModal">
+        <div class="adoption-modal">
+            <div class="modal-close" id="adoptionClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="adoption-head">Adoption</h1>
+            <div class="hidden" id="adoptionThanks">
+                <h2 class="adoption-thanks">Thank You!</h2>
+                <h3 class="adoption-updates">Check your email for updates</h3>
+            </div>
+            <div class="adoption-content" id="adoptionContent">
+                <h2>Thank you for considering an adoption of <span id="adoptName"></span>!</h2>
+                <p>There is just one last step that we need to take - filling the official documentation. </br>
+                    For this we need your <span class="adoption-emphasis">REAL</span> information, so please provide it to make this easier for us. </br>
+                    After we are done making official documentation you will recieve an email containing everything You will need to finish the adoption process.</p>
+                    <form class="adoption-form" id="adoptionForm">
+                        <div>
+                            <label for="adoptionName">Your name:</label>
+                            <input type="text" name="adoptionName" placeholder="Name" required autocomplete="off">
+                        </div>
+
+                        <div>
+                            <label for="adoptionLastName">Your last name:</label>
+                            <input type="text" name="adoptionLastName" placeholder="Last Name" required autocomplete="off">
+                        </div>
+
+                        <div>
+                            <label for="adoptionLastName">Your Email:</label>
+                            <input type="email" name="adoptionEmail" placeholder="Email" required autocomplete="off">
+                        </div>
+                        
+                        <div class="adoption-check">
+                            <input class="adoption-checkbox" type="checkbox" name="adoptionConfirmation" required>
+                            <label for="adoptionConfirmation">I confirm that provided information is correct and agree to give it to PawSanctuary.</label>
+                        </div>
+                    
+                        <div class="adoption-button-container">
+                            <button class="adoption-button">Adopt</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal nothing-here hidden" id="nothingHere">
+        <div class="nothing-here-container container">
+            <img src="../images/nothinghere.jpg" class="nothing-here-img">
+            <h1 class="nothing-here-text">Nothing here, please go back to the previous page</h1>
+            <a href="adopt.html" class="nothing-here-return">Return to listings</a>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="bundleProfile.js"></script>
+</body>
+</html>

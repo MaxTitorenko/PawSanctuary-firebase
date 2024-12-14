@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Twinkle+Star&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/siteLogo.webp" />
+    <title>Paw Sanctuary | Adopt</title>
+</head>
+<body>
+    <header>
+        <img class="settings-button" id="settingsOpen" src="images/settings.svg">
+        <nav class="top-menu container">
+            <a class="top-menu-item" href="index.html">Home</a>
+            <a class="top-menu-item  active-page" href="adopt.html">Adopt</a>
+            <a href="index.html"><img class="top-menu-logo" src="images/topLogo.webp"></a>
+            <a class="top-menu-item" href="contacts.html">Contacts</a>
+            <a class="top-menu-item" href="#" id="donateOpen">Donate</a>
+            <a class="mobile-button" id="mobileOpen" href=""><img src="images/mobile.svg"></a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="adopt-head">
+            <div class="line"></div>
+            <h1 class="adopt-header">Adopt</h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="admin-add">    
+            <a href="" class="admin-add-button hidden" id="adminAddOpen"> + Add a new animal</a>
+        </div>
+
+        <div class="adopt-interface">
+
+            <a href="" class="sort-toggle" id="sortButton">Sort</a>
+
+            <div class="adopt-sort" id="sortInterface">
+                <h2>Sort</h2>
+
+                <div class="sort-section">
+                    <h3>Species:</h3>
+                    <a href="" class="sort-button" id="dogs">Dogs</a>
+                    <a href="" class="sort-button" id="cats">Cats</a>
+                    <a href="" class="sort-button" id="other">Other</a>
+                </div>
+
+                <div class="sort-section">
+                    <h3>Gender:</h3>
+                    <a href="" class="sort-button" id="male">Male</a>
+                    <a href="" class="sort-button" id="female">Female</a>
+                </div>
+
+                <div class="sort-section">
+                    <h3>Age:</h3>
+                    <a href="" class="sort-button" id="young">Young</a>
+                    <a href="" class="sort-button" id="adult">Adult</a>
+                    <a href="" class="sort-button" id="senior">Senior</a>
+                </div>
+            </div>
+
+            <div class="adopt-listings" id="adoptListings">
+                <!-- Animal cards go here -->
+                <h2 class="adopt-no-match hidden" id="adoptNomatch">No listings that match your criteria</h2>
+                <a class="load-more" href="" id="loadMore">Load More +</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-top container">
+            <h1 class="footer-logo-name">Paw</br>Sanctuary</h1>
+            <img src="images/footerlogo.webp">
+            <div class="footer-socials">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/footerfb.webp"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/footerinst.webp"></a>
+                <a href="https://mail.google.com" target="_blank"><img src="images/footermail.webp"></a>
+            </div>
+        </div>
+        <p class="footer-copyright">©Paw Sanctuary 2024</p>
+    </footer>
+
+    <div class="modal mobile-menu hidden" id="mobileMenu">
+        <div id="mobileClose">
+            <div class="modal-close-line-1-mobile"></div>
+            <div class="modal-close-line-2-mobile"></div>
+        </div>
+        <div class="mobile-menu-items">
+            <a class="mobile-menu-item" href="index.html">Home</a>
+            <a class="mobile-menu-item active-page" href="adopt.html">Adopt</a>
+            <a class="mobile-menu-item" href="contacts.html">Contacts</a>
+            <a class="mobile-menu-item" href="" id="donateOpenMobile">Donate</a>
+            <a class="mobile-menu-item" href="" id="settingsOpenMobile">Settings</a>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="settingsModal">
+        <div class="settings-modal">
+            <div class="modal-close" id="settingsClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="settings-head">Settings</h1>
+            <div class="settings-content">
+                <div class="lang-selector">
+                    <h2>Language</h2>
+                    <div class="lang-selectors">
+                        <a href="index.html" class="lang-selector-button"><img src="images/usa.svg" class="lang-flag">English</a>
+                        <a href="ua-UA/index.html" class="lang-selector-button"><img src="images/ua.svg" class="lang-flag">Українська</a>
+                    </div>
+                </div>
+
+                <div class="settings-admin">
+                    <h2>Admin only</h2>
+                    <a class="settings-admin-auth" id="adminButton">Auth</a>
+                    <a class="settings-admin-auth" id="adminLogout">Log Out</a>
+                    <form class="settings-admin-form hidden" id="adminForm">
+                        <input class="admin-log" type="email" name="email" placeholder="email">
+                        <input class="admin-log" type="password" name="password" placeholder="password">
+                        <button class="admin-button">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="adminAddModal">
+        <div class="admin-modal">
+            <div class="modal-close" id="adminAddClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="admin-head">New Animal</h1>
+            <div class="admin-content">
+              <form id="adminAddForm" class="admin-add-form">
+
+                <div>
+                    <label for="Name">Name:</label>
+                    <input type="text" name="Name" required placeholder="name">
+                </div>
+
+                <div class="admin-add-radios">
+                    <label for="Species">Species:</label>
+                    <input type="radio" name="Species" id="speciesCat" value="Cat" required>
+                    <label for="speciesCat">Cat</label>
+                    <input type="radio" name="Species" id="speciesDog" value="Dog">
+                    <label for="speciesDog">Dog</label>
+                    <input type="radio" name="Species" id="speciesOther" value="Other">
+                    <label for="speciesOther">Other</label>
+                </div>
+
+                <div class="admin-add-radios">
+                    <label for="Gender">Gender:</label>
+                    <input type="radio" name="Gender" id="genderMale" value="Male" required>
+                    <label for="genderMale">Male</label>
+                    <input type="radio" name="Gender" id="genderFemale" value="Female">
+                    <label for="genderFemale">Female</label>
+                </div>
+
+                <div>
+                    <label for="Breed">Breed:</label>
+                    <input type="text" name="Breed" required placeholder="breed">
+                </div>
+
+                <div>
+                    <label for="Name">Age:</label>
+                    <input type="text" name="Age" required placeholder="age">
+                </div>
+
+                <div class="admin-add-radios">
+                    <label for="Maturity">Maturity:</label>
+                    <input type="radio" name="Maturity" id="maturityYoung" value="Young" required>
+                    <label for="maturityYoung">Young</label>
+                    <input type="radio" name="Maturity" id="maturityAdult" value="Adult">
+                    <label for="maturityAdult">Adult</label>
+                    <input type="radio" name="Maturity" id="maturitySenior" value="Senior">
+                    <label for="maturitySenior">Senior</label>
+                </div>
+
+                <div>
+                    <label for="Fee">Fee:</label>
+                    <input type="number" name="Fee" required placeholder="amount">
+                </div>
+
+
+                <div class="admin-add-radios">
+                    <label for="Desexed">Desexed:</label>
+                    <input type="radio" name="Desexed" id="desexedTrue" value=true required>
+                    <label for="desexedTrue">Yes</label>
+                    <input type="radio" name="Desexed" id="desexedFalse" value=false>
+                    <label for="desexedFalse">No</label>
+                </div>
+
+                <div class="admin-add-radios">
+                    <label for="Vaccinated">Vaccinated:</label>
+                    <input type="radio" name="Vaccinated" id="vaccinatedTrue" value=true required>
+                    <label for="vaccinatedTrue">Yes</label>
+                    <input type="radio" name="Vaccinated" id="vaccinatedFalse" value=false>
+                    <label for="vaccinatedFalse">No</label>
+                </div>
+
+                <div class="admin-add-pictures">
+                    <label for="Pictures">Pictures(links):</label>
+                    <input type="text" id="picture1" name="Picture1" placeholder="#1 (required)" required>
+                    <input type="text" id="picture2" name="Picture2" placeholder="#2">
+                    <input type="text" id="picture3" name="Picture3" placeholder="#3">
+                    <input type="text" id="picture4" name="Picture4" placeholder="#4">
+                    <input type="text" id="picture5" name="Picture5" placeholder="#5">
+                    <input type="text" id="picture6" name="Picture6" placeholder="#6">
+                </div>
+
+                <div>
+                    <label for="Caption">Caption(for the card):</label>
+                    <input type="text" name="Caption" required placeholder="caption">
+                </div>
+
+                <div class="admin-add-form-textarea">
+                    <label for="Description">Description:</label>
+                    <textarea name="Description" required placeholder="description..."></textarea>
+                </div>
+
+                <button id="adminAddSubmit" class="admin-add-form-submit">Submit</button>
+              </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hidden" id="donateModal">
+        <div class="donate-modal">
+            <div class="modal-close" id="donateClose">
+                <div class="modal-close-line-1"></div>
+                <div class="modal-close-line-2"></div>
+            </div>
+            <h1 class="donate-head">Donate</h1>
+            <div class="donate-content">
+                <p>All the paws of our sanctuary are in a constant need of food and toys to keep them happy and satisfied. <br>
+                    Any monetary help is very apreciated, you can also send toys and snacks to our P.O. box. <br>
+                    Thank you for contributing to a good cause!
+                </p>
+                <div class="donate-options">
+                    <div>
+                        <h2>Monetary help</h2>
+                        <form class="donate-form">
+                            <div class="donate-section">
+                                <p class="donate-pound">£</p>
+                                <input class="donate-money-input" type="number" placeholder="1 to 1000" id="donateInput" min="1" max="1000" required>
+                            </div>
+
+                            <div class="donate-buttons">
+                                <a href="" id="donate10">10£</a>
+                                <a href="" id="donate50">50£</a>
+                                <a href="" id="donate100">100£</a>
+                                <a href="" id="donate250">250£</a>
+                                <a href="" id="donate500">500£</a>
+                                <a href="" id="donate1000">1000£</a>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="firstName">First Name</label>
+                                <input type="text" name="firstName" autocomplete="off" placeholder="Name..." minlength="2" maxlength="20" required>
+                            </div>
+
+                            <div class="donate-inputs"> 
+                                <label for="secondName">Last Name</label>
+                                <input type="text" name="secondName" autocomplete="off" placeholder="Last name..." minlength="2" maxlength="20" required>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" autocomplete="off" placeholder="example@mail.net" minlength="1" maxlength="50" required>
+                            </div>
+
+                            <div class="donate-inputs">
+                                <label for="comm">Comment (Optional)</label>
+                                <textarea class="donate-input-comment" name="comm" placeholder="Your comment...(max 250 symbols)" minlength="1" maxlength="250"></textarea>
+                            </div>
+                            <div class="donate-send-container">
+                                <input class="donate-send donate-form-button" type="submit" value="Send Donation">
+                                <input class="donate-reset donate-form-button" type="reset" value="Reset Form">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="donate-box">
+                        <h2>P.O box</h2>
+                        <h3>Paw Sanctuary <br>
+                            729 Beverley Rd <br>
+                            729 Beverley Rd, Hull HU6 7EY, UK <br>
+                            Box #108</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="bundleAdopt.js"></script>
+</body>
+</html>
